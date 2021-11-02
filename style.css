@@ -1,0 +1,54 @@
+body {
+    background-color: #000000;
+    transition: all ease-in-out .3s;
+    margin: 0;
+    cursor: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body * {
+    cursor: none;
+}
+
+body.active {
+    background-color: #283593;
+}
+
+body.changed{
+    background-color:darkviolet;
+}
+
+#cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-top: -5px;
+    margin-left: -5px;
+    background-color: #ffffff;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity ease-in-out .3s, transform ease-in-out .3s;
+}
+
+body.active #cursor {
+    opacity: 1;
+}
+
+#cursor.active {
+    opacity: .35 !important;
+    transform: scale(2);
+}
+
+button {
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #3F51B5;
+    color: #ffffff;
+}
